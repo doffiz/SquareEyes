@@ -8,7 +8,6 @@ const params = new URLSearchParams(queryString);
 const id = params.get("id");
 const checkoutbutton = document.getElementById('checkoutbutton');
 fetch(APIURL_ID + "/" + id)
-
     .then(response => response.json())
     .then(data => {
         moviepic.setAttribute("src", data.image);

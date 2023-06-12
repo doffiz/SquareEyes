@@ -1,7 +1,6 @@
 const APIURL = "https://api.noroff.dev/api/v1/square-eyes"
 const trending = document.getElementById('trending');
 const bestsellers = document.getElementById('bestsellers');
-
 fetch(APIURL)
     .then(response => response.json())
     .then(data => {
@@ -44,3 +43,4 @@ fetch(APIURL)
         console.log(error);
     }
     );
+ 

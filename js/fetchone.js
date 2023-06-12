@@ -18,6 +18,7 @@ const checkout = document.getElementById('checkout');
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
+
 fetch(APIURL + "/" + id)
     .then(response => response.json())
     .then(data => {
