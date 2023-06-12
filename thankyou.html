@@ -18,7 +18,6 @@
             <a href="index.html"><img src="images/squareeyes.svg" width="240"  alt="SquareEyes Logo - Back to the homepage" title="SquareEyes"></a>
             <ul>
                     <li><a href="collections.html">Collections</a></li>
-                    <li><a href="checkout.html">Checkout</a></li>                
                     <li><a href="about.html">About us</a></li>
                     <li><a class="button" href="contact.html">Contact us</a></li>
             </ul>
@@ -26,11 +25,12 @@
     </header>
     <main id="main">
        <section>
-            <h1>Thank you!</h1>
+            <h1>Success!</h1>
+            <h2>Thank you for buying <span id="movietitle"></span>.</h2>
 <strong>We have received your payment. A receipt is sent to your email. Enjoy the movie!</strong>  
        </section>
        <section>
-        <video controls="controls" x-webkit-airplay="allow"></video>
+        <video id="videobox" poster="" controls="controls" x-webkit-airplay="allow"></video>
     </section>
     </main>
     <footer>
@@ -51,6 +51,7 @@
         </div>
     </footer>
 </div>
+<script src="js/thankyou.js"></script>
 </body>
 
 </html>

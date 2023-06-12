@@ -18,7 +18,6 @@
             <a href="index.html"><img src="images/squareeyes.svg" width="240"  alt="SquareEyes Logo - Back to the homepage" title="SquareEyes"></a>
             <ul>
                     <li><a href="collections.html">Collections</a></li>
-                    <li><a href="checkout.html">Checkout</a></li>                
                     <li><a href="about.html">About us</a></li>
                     <li><a class="button" href="contact.html">Contact us</a></li>
             </ul>
@@ -38,58 +37,16 @@
                     <label class="hide" for="cvv">CVV/CVC</label>
                     <input placeholder="CVV/CVC" type="text" id="cvv" name="cvv">
                 </div>
-                <a class="button" href="thankyou.html">Checkout</a>
+                <a class="button" id="checkoutbutton" href="thankyou.html">Checkout</a>
             </form>
 </div>
         <div class="hcol2">
-            <img class="co-img" src="images/Cover1.webp" alt="Once Upon a Time in Hollywood">
+            <img id="moviepic" class="co-img" src="" alt="">
         </div>
        </section>
        <section>
         <h2>Want to watch something else?</h2>
-        <div class="row">
-            <div class="movie">
-                <img src="images/Cover3.webp" width="150" alt="Godzilla cover">
-                <div class="movie-box">
-                    <strong>Godzilla:  King of the Monsters</strong>
-                    <div class="details">
-                        <p class="rating">7.8</p>
-                        <p class="price">39$</p>
-                    </div>
-                </div>
-            </div>
-            <a href="details.html">
-            <div class="movie">
-                <img src="images/Cover1.webp" alt="Once Upon a Time in Hollywood cover">
-                <div class="movie-box">
-                    <strong>Once Upon a Time in Hollywood</strong>
-                    <div class="details">
-                        <p class="rating">8.8</p>
-                        <p class="price">29$</p>
-                    </div>
-                </div>
-            </div>
-        </a>
-            <div class="movie">
-                <img src="images/Cover2.webp" alt="Sweetheart">
-                <div class="movie-box">
-                    <strong>Sweetheart</strong>
-                    <div class="details">
-                        <p class="rating">6.4</p>
-                        <p class="price">29$</p>
-                    </div>
-                </div>
-            </div>
-            <div class="movie">
-                <img src="images/Cover4.webp" alt="Toy Story 4 Cover">
-                <div class="movie-box">
-                    <strong>Toy Story 4</strong>
-                    <div class="details">
-                        <p class="rating">8.2</p>
-                        <p class="price">49$</p>
-                    </div>
-                </div>
-            </div>
+        <div id="trending" class="row">
         </div>
     </section>
     </main>
@@ -111,6 +68,7 @@
         </div>
     </footer>
 </div>
+<script src="js/checkout.js"></script>
 </body>
 
 </html>
