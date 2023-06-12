@@ -37,6 +37,7 @@ fetch(APIURL + "/" + id)
         moviepic.setAttribute("alt", data.title);
         release.innerHTML = data.released;
         checkout.setAttribute("href", "checkout.html?id=" + data.id);
+        document.title = "${data.title} | Square Eyes";
     }).catch(error => {
         console.log(error);
     }
