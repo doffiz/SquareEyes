@@ -26,7 +26,7 @@ fetch(APIURL)
         secmovies.forEach(movie => {
             sechtml += `<a href="details.html?id=${movie.id}">
             <div class="movie">
-            <img src="${movie.image}">
+            <img src="${movie.image} alt="${movie.title}">
             <div class="movie-box">
             <strong>${movie.title}</strong>
             <div class="details">
