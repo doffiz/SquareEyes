@@ -1,4 +1,4 @@
-const APIURL = "https://api.noroff.dev/api/v1/square-eyes"
+const APIURL = "https://egwkacnv.elementor.cloud/wp-json/wc/store/products"
 const movietitle = document.getElementById('movietitle');
 const price = document.getElementById('price');
 const price2 = document.getElementById('price2');
@@ -22,23 +22,23 @@ const id = params.get("id");
 fetch(APIURL + "/" + id)
     .then(response => response.json())
     .then(data => {
-        movietitle.innerHTML = data.title;
-        price.innerHTML = data.price;
-        price2.innerHTML = Math.floor(data.price / 2);
-        price3.innerHTML = Math.floor(data.price / 3);
+        console.log(data);
+        movietitle.innerHTML = data.name;
+        price.innerHTML = data.prices.price / 100 + " kr";
+        price2.innerHTML = Math.floor(data.prices.price / 100 / 2) + " kr";
+        price3.innerHTML = Math.floor(data.prices.price / 100 / 3) + " kr";
         moviedesc.innerHTML = data.description;
-        rank.innerHTML = data.rating;
-        aw1.innerHTML = data.tags[0];
-        aw2.innerHTML = data.tags[1];
-        if (data.favorite == true) {
-            heart.style.display = "none";
-            blackheart.style.display = "block";
+        if (data.tags != "") {
+            aw1.innerHTML = data.tags[0];
+            aw2.innerHTML = data.tags[1];
+        } else {
+            aw1.style.display = "none";
+            aw2.style.display = "none";
         }
-        moviepic.setAttribute("src", data.image);
+        moviepic.setAttribute("src", data.images[0].src);
         moviepic.setAttribute("alt", data.title);
-        release.innerHTML = data.released;
         checkout.setAttribute("href", "checkout.html?id=" + data.id);
-        document.title = data.title + " | Square Eyes";
+        document.title = data.name + " | Square Eyes";
     }).catch(error => {
         console.log(error);
     }

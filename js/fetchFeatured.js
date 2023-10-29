@@ -1,12 +1,13 @@
+const APIURL_FEAT = "https://egwkacnv.elementor.cloud/wp-json/wc/store/products?featured=true"
+const bestsellers = document.getElementById('bestsellers');
 
-const APIURL = "https://egwkacnv.elementor.cloud/wp-json/wc/store/products"
-const moviegrid = document.getElementById('moviegrid');
 
-fetch(APIURL)
+fetch(APIURL_FEAT)
     .then(response => response.json())
     .then(data => {
+        console.log(data);
         let html = "";
-        let movies = data;
+        const movies = data;
         movies.forEach(movie => {
             const price = movie.prices.price;
             const onSale = movie.prices.regular_price;
@@ -40,9 +41,9 @@ fetch(APIURL)
             </a>
             `
         }});
-
-        moviegrid.innerHTML = html;
+        bestsellers.innerHTML = html;
     }).catch(error => {
         console.log(error);
     }
     );
+ 
